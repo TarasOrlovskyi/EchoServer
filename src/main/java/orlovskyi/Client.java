@@ -8,7 +8,7 @@ public class Client {
         try (Socket socket = new Socket("127.0.0.1", 3000);
              OutputStream outputStream = new BufferedOutputStream(socket.getOutputStream());
              InputStream inputStream = new BufferedInputStream(socket.getInputStream());
-             BufferedInputStream inputConsole = new BufferedInputStream(System.in)
+             InputStream inputConsole = new BufferedInputStream(System.in)
              ) {
             int countConsole;
             byte[] bytesConsole = new byte[100];

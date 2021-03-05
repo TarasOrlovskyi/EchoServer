@@ -9,8 +9,8 @@ public class Server {
         //in what order should we close the streams? Does the order of closing streams matter?
         try (ServerSocket serverSocket = new ServerSocket(3000);
              Socket socket = serverSocket.accept();
-             BufferedOutputStream output = new BufferedOutputStream(socket.getOutputStream());
-             BufferedInputStream input = new BufferedInputStream(socket.getInputStream())
+             OutputStream output = new BufferedOutputStream(socket.getOutputStream());
+             InputStream input = new BufferedInputStream(socket.getInputStream())
         ) {
             int count;
             byte[] bytes = new byte[100];
